@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying to EC2 at' + env.13.201.131.164 
+                echo 'Deploying to EC2 at' + env.EC2_HOST
                 ssh"""
                 echo " Creating remote directory"
                 ssh -o StrictHostKeyChecking=no  ${REMOTE_USER}@${EC2_HOST} "mkdir -p ${REMOTE_PATH}"
