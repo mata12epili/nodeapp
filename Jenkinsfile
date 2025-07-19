@@ -13,10 +13,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                ssh 'npm install'
 
                 echo 'Building the application...'
-                sh 'npm run build'
+                ssh 'npm run build'
                 echo 'Build completed successfully.'
             }
         }
